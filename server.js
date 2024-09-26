@@ -7,7 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 5003;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://new-to-do-list-six.vercel.app', 
+  }));
 app.use(bodyParser.json());
 
 // MongoDB connection
