@@ -11,7 +11,11 @@ const PORT = process.env.PORT || 5003;
 
 // Middleware
 app.use(cors({
-    origin: 'https://new-to-do-list-six.vercel.app', 
+    origin: 'https://new-to-do-list-six.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    credentials: true,
+    optionsSuccessStatus: 200 
 }));
 app.use(bodyParser.json());
 
